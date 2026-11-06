@@ -595,3 +595,31 @@ h3 {
   color: var(--text-secondary);
   max-width: 40rem;
 }
+
+.photo { position: relative; }
+
+.photo-credit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0.75rem;
+  background: rgba(12, 14, 16, 0.78);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.photo-credit a { color: var(--brand-foam, #c2e7e3); }
+
+.photo:hover .photo-credit,
+.photo:focus-within .photo-credit {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .photo-credit { opacity: 1; transform: none; }
+}
