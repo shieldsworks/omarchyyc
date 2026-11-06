@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "name": "Casey Shields",
+    "boat": "Dash, Pacific Seacraft 25",
+    "location": "San Francisco Bay Area",
+    "x": "shieldsworks",
+    "photo": "/assets/photos/dash-at-the-dock.jpg"
+  }
+]
