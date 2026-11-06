@@ -471,3 +471,27 @@ h3 {
   text-transform: uppercase;
   color: var(--text-muted);
 }
+
+.tool-list {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.tool-list li {
+  margin: 0.25rem 0;
+}
+
+.tool-list a {
+  text-decoration: none;
+}
+
+.tool-list a:hover {
+  text-decoration: underline;
+}
+
+.card .meta a {
+  color: var(--brand);
+}
