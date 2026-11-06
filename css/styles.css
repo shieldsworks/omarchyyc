@@ -623,3 +623,27 @@ h3 {
 @media (hover: none) {
   .photo-credit { opacity: 1; transform: none; }
 }
+
+/* Member directory as a list: photo left, profile right */
+.member-grid {
+  grid-template-columns: 1fr;
+  max-width: 44rem;
+}
+
+.member-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.member-media {
+  flex: 0 0 9rem;
+  width: 9rem;
+  aspect-ratio: 3 / 2;
+}
+
+.member-avatar { font-size: 1.75rem; }
+
+@media (max-width: 30rem) {
+  .member-media { flex-basis: 6.5rem; width: 6.5rem; }
+}
