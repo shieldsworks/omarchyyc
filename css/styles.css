@@ -1,4 +1,4 @@
-/* Omarchy Yacht Club — complementary to omarchy.org (Tokyo Night tokens) */
+/* Omarchy Yacht Club — Tokyo Night base, salt-water accents */
 :root {
   --bg-deep: #13141c;
   --bg: #1a1b26;
@@ -9,8 +9,10 @@
   --text: #c0caf5;
   --text-secondary: #a9b1d6;
   --text-muted: #8b93b8;
-  --brand: #9ece6a;
-  --brand-soft: #9ece6a1f;
+  --brand: #2ac3de;
+  --brand-soft: #2ac3de1f;
+  --brand-hover: #73daca;
+  --brand-foam: #c2e7e3;
   --brand-ink: #0c0e10;
   --radius: 0;
   --font-sans: "Geist", "Geist Variable", system-ui, sans-serif;
@@ -64,7 +66,7 @@ a {
 }
 
 a:hover {
-  color: #bbdd97;
+  color: var(--brand-hover);
 }
 
 a:focus-visible,
@@ -279,8 +281,8 @@ h3 {
 }
 
 .btn:hover {
-  background: #bbdd97;
-  border-color: #bbdd97;
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
   color: var(--brand-ink);
 }
 
@@ -291,7 +293,7 @@ h3 {
 
 .btn-ghost:hover {
   background: var(--brand-soft);
-  color: #bbdd97;
+  color: var(--brand-hover);
 }
 
 .section {
@@ -468,4 +470,28 @@ h3 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.tool-list {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.tool-list li {
+  margin: 0.25rem 0;
+}
+
+.tool-list a {
+  text-decoration: none;
+}
+
+.tool-list a:hover {
+  text-decoration: underline;
+}
+
+.card .meta a {
+  color: var(--brand);
 }
