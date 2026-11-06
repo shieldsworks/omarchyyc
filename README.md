@@ -17,7 +17,7 @@ Colors and type are complementary to omarchy.org (Tokyo Night / solitude-style t
 | Token | Value |
 |-------|--------|
 | Background | `#1a1b26` |
-| Brand | `#9ece6a` |
+| Brand | `#2ac3de` |
 | Text | `#c0caf5` |
 | Sans | Geist |
 | Mono | JetBrains Mono |
@@ -30,15 +30,40 @@ Assets in `assets/` include the official Omarchy logo and wordmark (from [omarch
 |------|---------|
 | `/` | Landing |
 | `/meetups` | Meetups (placeholder until dates exist) |
-| `/photos` | Gallery placeholders |
+| `/photos` | Gallery |
+| `/members` | Opt-in member directory |
 | `/merch` | Coming soon |
-| `/join` | Membership — embed Google Form when ready |
+| `/join` | Membership form |
+
+
+## Member directory
+
+Members appear on `/members` only after they opt in on the join form ("List me in the member directory"). Nothing is listed automatically.
+
+To publish an opted-in member:
+
+1. Add a photo under `assets/members/` (square JPEG/PNG works best).
+2. Append an object to `members.json` at the repo root:
+
+```json
+[
+  {
+    "name": "Casey",
+    "boat": "Dash",
+    "location": "San Francisco Bay",
+    "x": "shieldsworks",
+    "photo": "/assets/members/casey.jpg"
+  }
+]
+```
+
+Fields: `name` (required), `boat`, `location`, `x` (handle without @), `photo` (site path; omit to show an initial avatar). Keep the file a JSON array. Commit and push; Vercel deploys `main`.
 
 ## Fill in later
 
-1. Google Form embed URL in `join.html` (search for `TODO(casey)`).
-2. Uncomment X / Instagram `@omarchyyc` footer links when those accounts exist.
-3. Real meetup entries and photo files.
+1. Add the join-form checkbox “List me in the member directory” if it is not already there.
+2. Real meetup entries.
+3. Append opted-in members to `members.json` (see above).
 
 ## Local preview
 
