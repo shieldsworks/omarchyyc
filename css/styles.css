@@ -133,9 +133,8 @@ select:focus-visible {
 }
 
 .brand-mark {
-  width: auto;
-  height: 1.5rem;
-  aspect-ratio: 465 / 255;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
 }
 
@@ -684,6 +683,7 @@ h3 {
   font: inherit;
 }
 
+.brand-mark,
 .inline-logo,
 .footer-brand img.wordmark {
   background: var(--art-bg);
