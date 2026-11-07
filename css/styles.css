@@ -689,3 +689,8 @@ h3 {
   background: var(--art-bg);
   padding: 0.2rem;
 }
+
+/* Slogans keep their exact case (e.g. rm -rf /shore). */
+.slogan {
+  text-transform: none;
+}
