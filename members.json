@@ -5,5 +5,12 @@
     "location": "San Francisco Bay Area",
     "x": "shieldsworks",
     "photo": "/assets/members/casey.jpg"
+  },
+  {
+    "name": "Fred Nix",
+    "boat": "SS Im_Broke",
+    "location": "In my dreams and bathtub",
+    "x": "nixfred",
+    "photo": "/assets/members/fred-nix.jpg"
   }
 ]
