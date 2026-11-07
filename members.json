@@ -12,5 +12,12 @@
     "location": "In my dreams and bathtub",
     "x": "nixfred",
     "photo": "/assets/members/fred-nix.jpg"
+  },
+  {
+    "name": "Scott Jones",
+    "boat": "Cricket, wooden 18' catboat",
+    "location": "Long Island Sound",
+    "x": "bi9kahuna",
+    "photo": "/assets/members/scott-jones.jpg"
   }
 ]
