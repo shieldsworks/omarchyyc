@@ -1,0 +1,39 @@
+name: Theme checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  themes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check generated files
+        run: |
+          python scripts/build-themes.py
+          git diff --exit-code
+      - name: Install test browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/oyc-tests" playwright@1.65.0 --no-audit --no-fund
+          "$RUNNER_TEMP/oyc-tests/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Check all pages and themes
+        env:
+          NODE_PATH: ${{ runner.temp }}/oyc-tests/node_modules
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/oyc-http.log" 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:8765/ > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/test-themes.cjs
