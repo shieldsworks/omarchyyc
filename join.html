@@ -25,6 +25,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
+  <!-- theme-head -->
+  <script>
+    try {
+      const theme = localStorage.getItem('oyc-theme');
+      if (["catppuccin","catppuccin-latte","ethereal","everforest","flexoki-light","gruvbox","hackerman","jade-horse","kanagawa","last-horizon","lumon","lupine","matte-black","miasma","nord","retro-82","ristretto","rose-pine","solitude","starship","tokyo-night","vantablack","white"].includes(theme)) document.documentElement.dataset.theme = theme;
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/css/themes.css">
+  <script src="/js/theme.js" defer></script>
+  <!-- /theme-head -->
 </head><body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
@@ -44,6 +54,36 @@
       <a href="/merch">Merch</a>
       <a href="/join" aria-current="page">Join</a>
       </nav>
+      <!-- theme-control -->
+      <label class="theme-picker" hidden>Theme
+        <select id="theme-select">
+<option value="auto">Auto</option>
+<option value="catppuccin">Catppuccin</option>
+<option value="catppuccin-latte">Catppuccin Latte</option>
+<option value="ethereal">Ethereal</option>
+<option value="everforest">Everforest</option>
+<option value="flexoki-light">Flexoki Light</option>
+<option value="gruvbox">Gruvbox</option>
+<option value="hackerman">Hackerman</option>
+<option value="jade-horse">Jade Horse</option>
+<option value="kanagawa">Kanagawa</option>
+<option value="last-horizon">Last Horizon</option>
+<option value="lumon">Lumon</option>
+<option value="lupine">Lupine</option>
+<option value="matte-black">Matte Black</option>
+<option value="miasma">Miasma</option>
+<option value="nord">Nord</option>
+<option value="retro-82">Retro 82</option>
+<option value="ristretto">Ristretto</option>
+<option value="rose-pine">Rosé Pine</option>
+<option value="solitude">Solitude</option>
+<option value="starship">Starship</option>
+<option value="tokyo-night">Tokyo Night</option>
+<option value="vantablack">Vantablack</option>
+<option value="white">White</option>
+        </select>
+      </label>
+      <!-- /theme-control -->
     </div>
   </header>
   <main id="main">

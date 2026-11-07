@@ -1,5 +1,9 @@
 /* Omarchy Yacht Club — Tokyo Night base, salt-water accents */
 :root {
+  color-scheme: dark;
+  --art-bg: #1a1b26;
+  --photo-credit-bg: #0c0e10;
+  --photo-credit-text: #c2e7e3;
   --bg-deep: #13141c;
   --bg: #1a1b26;
   --surface: #1f2230;
@@ -28,7 +32,6 @@
 }
 
 html {
-  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
@@ -70,7 +73,8 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+select:focus-visible {
   outline: 2px solid var(--brand);
   outline-offset: 2px;
 }
@@ -604,7 +608,7 @@ h3 {
   right: 0;
   bottom: 0;
   padding: 0.5rem 0.75rem;
-  background: rgba(12, 14, 16, 0.78);
+  background: var(--photo-credit-bg);
   font-family: var(--font-mono);
   font-size: 0.85rem;
   opacity: 0;
@@ -612,7 +616,7 @@ h3 {
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-.photo-credit a { color: var(--brand-foam, #c2e7e3); }
+.photo-credit a { color: var(--photo-credit-text); }
 
 .photo:hover .photo-credit,
 .photo:focus-within .photo-credit {
@@ -646,4 +650,33 @@ h3 {
 
 @media (max-width: 30rem) {
   .member-media { flex-basis: 6.5rem; width: 6.5rem; }
+}
+
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.theme-picker[hidden] { display: none; }
+
+.theme-picker select {
+  max-width: 11rem;
+  min-height: 2.75rem;
+  padding: 0.35rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.brand-mark,
+.inline-logo,
+.footer-brand img.wordmark {
+  background: var(--art-bg);
+  padding: 0.2rem;
 }
