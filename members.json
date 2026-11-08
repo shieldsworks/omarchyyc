@@ -19,5 +19,19 @@
     "location": "Long Island Sound",
     "x": "bi9kahuna",
     "photo": "/assets/members/scott-jones.jpg"
+  },
+  {
+    "name": "Jim And Linn Aegirson",
+    "boat": "Ching Shih (鄭氏)",
+    "location": "The 7 seas, port in norway",
+    "x": "liberatedgent",
+    "photo": "/assets/members/jim-and-linn-aegirson.jpg"
+  },
+  {
+    "name": "Tom",
+    "boat": "Cooee",
+    "location": "Mediterranean",
+    "x": "thomasbaertl",
+    "photo": "/assets/members/tom.jpg"
   }
 ]
